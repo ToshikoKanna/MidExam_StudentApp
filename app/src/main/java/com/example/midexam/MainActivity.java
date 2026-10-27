@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, students);
         listView.setAdapter(adapter);
 
-        // Tap an item in the list to fill the form (then you can EDIT / DELETE it)
+
         listView.setOnItemClickListener((parent, view, position, id) -> {
             Student s = students.get(position);
             etName.setText(s.getName());

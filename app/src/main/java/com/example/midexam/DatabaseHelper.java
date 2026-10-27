@@ -37,7 +37,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    // ADD
+
     public boolean insertStudent(String id, String name, boolean enrolled) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -47,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.insert(TABLE, null, cv) != -1; // -1 if ID already exists
     }
 
-    // EDIT
+
     public boolean updateStudent(String id, String name, boolean enrolled) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -56,13 +56,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return db.update(TABLE, cv, COL_ID + "=?", new String[]{id}) > 0;
     }
 
-    // DELETE
+
     public boolean deleteStudent(String id) {
         SQLiteDatabase db = getWritableDatabase();
         return db.delete(TABLE, COL_ID + "=?", new String[]{id}) > 0;
     }
 
-    // VIEW
+
     public List<Student> getAllStudents() {
         List<Student> list = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();

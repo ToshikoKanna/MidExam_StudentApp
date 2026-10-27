@@ -15,7 +15,7 @@ public class Student {
     public String getName() { return name; }
     public boolean isEnrolled() { return enrolled; }
 
-    // Text shown in the ListView
+
     @Override
     public String toString() {
         return "ID: " + id + "\nName: " + name + "\nEnrolled: " + (enrolled ? "Yes" : "No");
