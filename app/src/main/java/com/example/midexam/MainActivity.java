@@ -30,13 +30,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         etName = findViewById(R.id.etName);
-        etId = findViewById(R.id.etId);
+        etId = findViewById(R.id.etStudentId);
         cbEnrolled = findViewById(R.id.cbEnrolled);
         btnAdd = findViewById(R.id.btnAdd);
         btnEdit = findViewById(R.id.btnEdit);
         btnDelete = findViewById(R.id.btnDelete);
         btnView = findViewById(R.id.btnView);
-        listView = findViewById(R.id.listView);
+        listView = findViewById(R.id.lvStudents);
 
         dbHelper = new DatabaseHelper(this);
         adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, students);
